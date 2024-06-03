@@ -46,25 +46,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Create the .env file
-ENV_FILE="${EHM_API_DIR}/.env"
-echo "Generating .env file at ${ENV_FILE}..."
-
-cat <<EOL > $ENV_FILE
-EHM_DATABASE_URL="mysql://root:${MYSQL_ROOT_PASSWORD}@172.1.0.6:3306/ehm"
-EHM_APP_PORT=2326
-
-EHM_API_URL=http://host.docker.internal:2326
-
-EHM_API_PUBLIC_URL=${EHM_API_PUBLIC_URL}
-EOL
-
-# Check if .env file was created successfully
-if [ $? -ne 0 ]; then
-  echo "Failed to create .env file at ${ENV_FILE}"
-  exit 1
-fi
-
 # Run the install script
 INSTALL_SCRIPT="${EXTRACT_DIR}/${NEW_EHM_VERSION}_update.sh"
 if [ -f "$INSTALL_SCRIPT" ]; then
