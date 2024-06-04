@@ -50,7 +50,7 @@ fi
 INSTALL_SCRIPT="${EXTRACT_DIR}/${NEW_EHM_VERSION}_update.sh"
 if [ -f "$INSTALL_SCRIPT" ]; then
   echo "Running install script from ${EXTRACT_DIR}..."
-  bash "$INSTALL_SCRIPT $NEW_EHM_VERSION"
+  bash "$INSTALL_SCRIPT" "$NEW_EHM_VERSION"
 else
   echo "Install script not found in ${EXTRACT_DIR}"
   exit 1
