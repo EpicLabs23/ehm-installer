@@ -20,7 +20,7 @@ EHM_API_PUBLIC_URL=$(prompt_for_input "Enter the EHM API public URL: ")
 # Define the URL and target directories
 URL="http://epiclabs23.com/${NEW_EHM_VERSION}_ubuntu_20.04.tar.gz"
 TARGET_DIR="/epiclabs23/eh/ehm"
-EXTRACT_DIR="${TARGET_DIR}/${NEW_EHM_VERSION}_ubuntu_20.04"
+EXTRACT_DIR="${TARGET_DIR}/${NEW_EHM_VERSION}"
 EHM_API_DIR="${EXTRACT_DIR}/ehm-api"
 
 # Create the target directory if it doesn't exist
