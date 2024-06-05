@@ -2,10 +2,21 @@
 EHM Installer and update scripts
 
 #### Installation
-Clone this repository anywhere on your live server.
+```bash
 git clone https://github.com/EpicLabs23/ehm-installer.git
+cd ehm-installer
+```
 
-To install EHM, run `./ehm-install.sh`. Prompts will as for information that required for the installation.
+##### To install / update EHM in Ubuntu 20.04
+Run 
+```bash
+./ehm-update_ubuntu_20.04.sh
+```
+Prompts will ask for information that required for the installation.
 
-To update the EHM, run `./ehm-update.sh`. Prompts will as for information that required for the installation.
-
+##### To install / update EHM in Ubuntu 22.04
+Run 
+```bash
+./ehm-update_ubuntu_22.04.sh
+```
+Prompts will ask for information that required for the installation.

@@ -18,31 +18,34 @@ MYSQL_ROOT_PASSWORD=$(prompt_for_input "Enter the MySQL root password: ")
 EHM_API_PUBLIC_URL=$(prompt_for_input "Enter the EHM API public URL: ")
 
 # Define the URL and target directories
-URL="http://epiclabs23.com/${NEW_EHM_VERSION}.tar.gz"
+URL="http://epiclabs23.com/${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz"
 TARGET_DIR="/epiclabs23/eh/ehm"
 EXTRACT_DIR="${TARGET_DIR}/${NEW_EHM_VERSION}"
 EHM_API_DIR="${EXTRACT_DIR}/ehm-api"
+
+# remove EXTRACT_DIR if it exists, so that it can be recreated with only new files
+rm -rf $EXTRACT_DIR
 
 # Create the target directory if it doesn't exist
 mkdir -p $TARGET_DIR
 
 # Download the file
 echo "Downloading $URL..."
-curl -o "${TARGET_DIR}/${NEW_EHM_VERSION}.tar.gz" $URL
+curl -o "${TARGET_DIR}/${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz" $URL
 
 # Check if the download was successful
 if [ $? -ne 0 ]; then
-  echo "Failed to download ${NEW_EHM_VERSION}.tar.gz"
+  echo "Failed to download ${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz"
   exit 1
 fi
 
 # Extract the file
-echo "Extracting ${NEW_EHM_VERSION}.tar.gz to $TARGET_DIR..."
-tar -xzvf "${TARGET_DIR}/${NEW_EHM_VERSION}.tar.gz" -C $TARGET_DIR
+echo "Extracting ${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz to $TARGET_DIR..."
+tar -xzvf "${TARGET_DIR}/${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz" -C $TARGET_DIR
 
 # Check if extraction was successful
 if [ $? -ne 0 ]; then
-  echo "Failed to extract ${NEW_EHM_VERSION}.tar.gz"
+  echo "Failed to extract ${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz"
   exit 1
 fi
 
