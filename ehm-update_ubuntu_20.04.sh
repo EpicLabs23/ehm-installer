@@ -23,6 +23,9 @@ TARGET_DIR="/epiclabs23/eh/ehm"
 EXTRACT_DIR="${TARGET_DIR}/${NEW_EHM_VERSION}"
 EHM_API_DIR="${EXTRACT_DIR}/ehm-api"
 
+# remove EXTRACT_DIR if it exists, so that it can be recreated with only new files
+rm -rf $EXTRACT_DIR
+
 # Create the target directory if it doesn't exist
 mkdir -p $TARGET_DIR
 
