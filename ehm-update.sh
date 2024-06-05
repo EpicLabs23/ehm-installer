@@ -9,7 +9,7 @@ prompt_for_input() {
 }
 
 # Prompt for NEW_EHM_VERSION
-NEW_EHM_VERSION=$(prompt_for_input "Enter the new EHM version: ")
+NEW_EHM_VERSION=$(prompt_for_input "Enter the new EHM version (e.g. v0.0.3): ")
 
 # Prompt for MYSQL_ROOT_PASSWORD
 MYSQL_ROOT_PASSWORD=$(prompt_for_input "Enter the MySQL root password: ")
