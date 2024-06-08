@@ -5,6 +5,8 @@ EHM Installer and update scripts
 ```bash
 git clone https://github.com/EpicLabs23/ehm-installer.git
 cd ehm-installer
+# Or you may need to update, if you already have the installer
+git pull
 ```
 
 ##### To install / update EHM in Ubuntu 20.04
