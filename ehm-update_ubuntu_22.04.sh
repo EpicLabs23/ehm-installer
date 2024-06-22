@@ -15,7 +15,7 @@ NEW_EHM_VERSION=$(prompt_for_input "Enter the new EHM version (e.g. v0.0.3): ")
 MYSQL_ROOT_PASSWORD=$(prompt_for_input "Enter the MySQL root password: ")
 
 # Prompt for EHM_API_PUBLIC_URL
-EHM_API_PUBLIC_URL=$(prompt_for_input "Enter the EHM API public URL: ")
+EHM_API_PUBLIC_URL=$(prompt_for_input "Enter the EHM API public URL (e.g. http://eh.epiclabs23.com:2326): ")
 
 # Define the URL and target directories
 URL="http://epiclabs23.com/${NEW_EHM_VERSION}_ubuntu_22.04.tar.gz"

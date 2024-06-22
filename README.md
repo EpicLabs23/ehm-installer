@@ -1,7 +1,7 @@
 # ehm-installer
 EHM Installer and update scripts
 
-#### Installation
+#### Install the Installer
 ```bash
 git clone https://github.com/EpicLabs23/ehm-installer.git
 cd ehm-installer
