@@ -1,3 +1,6 @@
+# System installation ( prerequisite for fresh installation )
+https://github.com/EpicLabs23/eh-documentation/blob/main/README.md
+
 # ehm-installer
 EHM Installer and update scripts
 
